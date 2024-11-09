@@ -1,7 +1,7 @@
-package com.example.SD19308.phongKham.util;
+package com.example.SD19308.xeMay.util;
 
-import com.example.SD19308.phongKham.model.BacSi;
 import com.example.SD19308.phongKham.model.PhongKham;
+import com.example.SD19308.xeMay.model.XeMay;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -24,8 +24,8 @@ public class HibernateConfig {
         properties.put(Environment.PASS, "123456a@");
         properties.put(Environment.SHOW_SQL, "true");
 
-        conf.addAnnotatedClass(PhongKham.class);
-        conf.addAnnotatedClass(BacSi.class);
+        conf.addAnnotatedClass(XeMay.class);
+
         conf.setProperties(properties);
         ServiceRegistry registry = new StandardServiceRegistryBuilder()
                 .applySettings(conf.getProperties()).build();
