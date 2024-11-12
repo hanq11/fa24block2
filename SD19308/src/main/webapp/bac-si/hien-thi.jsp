@@ -48,6 +48,11 @@
                     <td>${bs.luong}</td>
                     <td>${bs.phongKham.ten}</td>
                     <td>${bs.phongKham.soNha}</td>
+                    <td>
+                        <a href="/bac-si/view-update?id=${bs.id}">Update</a>
+                        <a href="/bac-si/delete?id=${bs.id}">Xoa</a>
+                        <a href="/bac-si/detail?id=${bs.id}">Detail</a>
+                    </td>
                 </tr>
             </c:forEach>
         </tbody>
