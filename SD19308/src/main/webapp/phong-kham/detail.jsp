@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
+<%  %>
     Id: ${phongKham.id} <br>
     Ten: ${phongKham.ten} <br>
     So nha: ${phongKham.soNha}
