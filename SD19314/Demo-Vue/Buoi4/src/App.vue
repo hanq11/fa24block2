@@ -33,6 +33,8 @@
   const tinhToan = () => {
     dapAn.value = Number(a.value) + Number(b.value);
   }
+
+  let gioiTinh = ref('')
 </script>
 
 <template>
@@ -64,7 +66,10 @@
     <h3>Nhap vao so b: </h3>
     <input type="text" v-model="b"> <br>
     <h3>Dap an la: {{ dapAn }}</h3>
-    <button @click="tinhToan">Tinh toan</button>
+    <button @click="tinhToan">Tinh toan</button> <br>
+    Nam <input type="radio" name="gt" v-model="gioiTinh" value="Nam">
+    Nu <input type="radio" name="gt" v-model="gioiTinh" value="Nu"> <br>
+    <p>Gioi tinh cua ban la: {{ gioiTinh }}</p>
 
   </div>
 </template>
