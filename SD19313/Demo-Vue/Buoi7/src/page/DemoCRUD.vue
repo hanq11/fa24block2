@@ -69,24 +69,27 @@
     <FormXeMay v-model:xeMayForm="xeMay"/>
     <button v-if="!isUpdate" @click="themXeMay()">Them xe may</button>
     <button v-if="isUpdate" @click="suaXeMay()">Sua xe may</button>
-    <table>
+    <table class="table">
         <thead>
             <tr>    
-                <th>ID</th>
-                <th>Ma</th>
-                <th>Ten</th>
-                <th>Gia</th>
+                <th scope="col">ID</th>
+                <th scope="col">Ma</th>
+                <th scope="col">Ten</th>
+                <th scope="col">Gia</th>
+                <th scope="col">Chuc nang</th>
             </tr>
         </thead>
         <tbody>
             <template v-for="(xm, index) in danhSach" :key="xm.ma">
                 <tr>
-                    <td>{{ index + 1 }}</td>
+                    <th scope="row">{{ index + 1 }}</th>
                     <td>{{ xm.ma }}</td>
                     <td>{{ xm.ten }}</td>
                     <td>{{ xm.gia }}</td>
-                    <td><button @click="xoaXeMay(index)">Xoa</button></td>
-                    <td><button @click="detailXeMay(index)">Detail</button></td>
+                    <td>
+                        <button class="btn bg-success" @click="xoaXeMay(index)">Xoa</button>
+                        <button class="btn bg-warning"@click="detailXeMay(index)">Detail</button>
+                    </td>
                 </tr>
             </template>
         </tbody>
