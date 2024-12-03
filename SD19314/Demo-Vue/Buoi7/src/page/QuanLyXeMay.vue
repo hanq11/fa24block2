@@ -6,24 +6,32 @@
         {
             "ma": "XM001",
             "ten": "Yamaha",
-            "gia": "123"  
+            "gia": "123",
+            "hang": "Samsung",
+            "gioiTinh": "Nam"  
         }, 
         {
             "ma": "XM002",
             "ten": "Yamaha",
-            "gia": "123"  
+            "gia": "123",
+            "hang": "Apple",
+            "gioiTinh": "Nu"  
         }, 
         {
             "ma": "XM003",
             "ten": "Yamaha",
-            "gia": "123"  
+            "gia": "123",
+            "hang": "Oppo",
+            "gioiTinh": "Nu"  
         } 
     ])
 
     let xeMay = ref({
         "ma": "",
         "ten": "",
-        "gia": ""
+        "gia": "",
+        "hang": "",
+        "gioiTinh": ""
     })
 
     let isUpdate = ref(false);
@@ -61,7 +69,9 @@
         xeMay.value = {
             "ma": "",
             "ten": "",
-            "gia": ""
+            "gia": "",
+            "hang": "",
+            "gioiTinh": ""
         }
     }
 </script>
@@ -77,6 +87,8 @@
                 <th scope="col">Ma</th>
                 <th scope="col">Ten</th>
                 <th scope="col">Gia</th>
+                <td scope="col">Hang</td>
+                <td scope="col">Gioi tinh</td>
                 <th scope="col" colspan="2">Chuc nang</th>
             </tr>
         </thead>
@@ -87,6 +99,8 @@
                     <td>{{ xm.ma }}</td>
                     <td>{{ xm.ten }}</td>
                     <td>{{ xm.gia }}</td>
+                    <td>{{ xm.hang }}</td>
+                    <td>{{ xm.gioiTinh }}</td>
                     <td>
                         <button class="btn btn-success" @click="xoaXeMay(index)">Xoa</button>
                         <button class="btn btn-warning mx-2" @click="detailXeMay(index)">Detail</button>
